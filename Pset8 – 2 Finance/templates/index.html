@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for p in portfolio %}
+
+            <tr>
+                <td>{{ p["symbol"] }}</td>
+                <td>{{ p["name"] }}</td>
+                <td>{{'%0.0f'| format( p["totals"] |float)}}</td>
+                <td>{{'%0.2f'| format( p["price"] |float)}}</td>
+                <td>{{'%0.2f'| format( p["totals"] * p["price"] |float)}}</td>
+            </tr>
+
+            {% endfor %}
+
+            <tr>
+                <td>CASH</td>
+                <td colspan="3"></td>
+                <td>{{'%0.2f'| format( currentcash[0]["cash"] |float)}}</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td class="bold">{{'%0.2f'| format( totalvalue |float)}}</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+{% endblock %}

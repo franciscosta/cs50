@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/nzo1ifo.css">
+        
+        <title>Yves App</title>
+    </head>
+    <body>
+
+        <header>
+
+            <div class="container left-side">
+
+                <ul class="menu">
+
+                    <a href="/">
+                        <img src="assets/do.png" alt="tick" class="logo" id="lg">
+                    </a>
+                    <li><a href="/home">Yves App</a></li>
+                    <li class="lighter"><a href="howto.html">How To Use</a></li>
+                    <li class="lighter"><a href="about.html">Info</a></li>
+                    <li class="lighter"><a href="terms.html">Privacy</a></li>
+
+                </ul>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <form>
+                <input type="text" class="input" placeholder="Add a task" id="form" autocomplete="off" autofocus="on"/>
+                <button class="addButton" onClick="addTask()"></button>
+            </form>
+
+            <div class="main">
+
+                <ul class="task-container" id="taskContainer">
+
+                </ul>
+
+                <div id="seuss1">
+                    
+                </div>
+
+            </div>
+
+            <div id="reset">
+                <p class="seuss">Reset the list</p>
+            </div>
+
+        </main>
+        
+        <script type="text/javascript" src="javascript.js"></script>
+
+    </body>
+</html>

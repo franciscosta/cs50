@@ -1,0 +1,466 @@
+/* General styles */
+
+body {
+    padding: 10px;
+    padding-top: 0px;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+    letter-spacing: .03em;
+    font-size: 20px;
+}
+
+main {
+    with: 100%;
+    max-width: 700px;
+    margin: 150px auto 0;
+}
+
+header {
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 0 0px 20px;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #bec0f9;
+}
+
+/* --------------------------- */
+
+/* Menu at the top */
+
+.logo {
+    width: 30px;
+    float: left;    
+    margin-right: 20px;
+}
+
+.done {
+    display: inline-block;
+    float: left;
+    margin-right: 17px;
+}
+
+.menu {
+    list-style: none;
+    display: inline-block;
+    padding-inline-start: 0;
+    margin-top: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 14px;
+    margin-top: 3px;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #2d1fe8;
+}
+
+.lighter {
+    opacity: .3;
+}
+
+.lighter:hover {
+    opacity: 1;
+    transition: .1s;
+}
+
+/* --------------------------- */
+
+/* The input */
+
+form {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 75px;
+    border-radius: 6px;
+    border: 2px solid #2d1fe8;
+    font-size: 35px;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+    letter-spacing: .03em;
+    padding-left: 25px;
+    padding-top: 7px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;   
+    box-sizing: border-box;    
+    background-color: white;
+    color: #2d1fe8;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.input::placeholder {
+    color: #eae8fd;
+    padding-top: 2px;
+}
+
+.input:focus, .input:disabled {
+    outline:none;
+    border-color: #2d1fe8;
+}
+
+/* The add button */
+
+.addButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: #2d1fe8;
+    color:  #2d1fe8;
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    cursor: pointer;
+    background-image: url('assets/do.png');
+    background-size: cover;
+    border: none;
+}
+
+/* --------------------------- */
+
+/* The list of tasks */
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    overflow: hidden;
+}
+
+.task-container {
+    max-width: 100%;
+    background-color: white;
+    display: block;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    box-shadow: 0px 0px 20px rgba(0,0,0,.04);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.task {
+    width: 100%;
+    padding: 20px 25px 15px 25px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    font-size: 35px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;    
+    position: relative;
+    color: #2d1fe8;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+}
+
+.task:hover {
+    background-color: #f5f5fe;  
+    /* transition: .1s; */
+    cursor: pointer;
+}
+
+.grey {
+    color:#eae8fd;
+}
+
+.strike {
+    color: #eae8fd;
+    background-image: url('assets/done.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 97% 52%;
+}
+
+/* --------------------------- */
+
+/* Footer with how to use it */
+
+#seuss1 {
+    margin-top: 40px;
+}
+
+.seuss {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #bec0f9;
+    font-family: forma-djr-display, sans-serif !important;
+    letter-spacing: .05em;
+}
+
+.seuss a {
+    text-decoration: none !important;
+    display: inline-block;
+    border-bottom: 2px solid #bec0f9;
+}
+
+.seuss a:visited {
+    color: #bec0f9;
+}
+
+#reset {
+    width: 100%;
+    height: 50%;
+}
+
+#reset .seuss {
+    display: block;
+    cursor: pointer;
+    width: 90px;
+    margin: 30px auto;
+    background-color: #f5f5fe;
+    border-radius: 3px;
+    color: #c5c7fa;
+    padding: 3px 4px;
+}
+
+#reset .seuss:hover {
+    background-color: #2d1fe8;
+    color: white;
+}
+
+.reset  {
+    width: 20px;
+    text-align: center;
+    display: block;
+    margin: 40px auto;
+    position: relative;
+    opacity: .2;
+}
+.reset:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.hide {
+    display: none;
+}
+
+.blue {
+    display: inline-block;
+    background-color: #f5f5fe;
+    border-radius: 3px;
+    color: #bec0f9;
+    padding: 2px 7px;
+    margin: 0 3px;
+}
+
+#clear {
+    margin-left: 5px;
+}
+
+/* --------------------------- */
+
+/* Extra pages */
+
+.about {
+    font-size: 27px;
+    line-height: 45px;
+    letter-spacing: .05em;
+    color: #2d1fe8;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+}
+
+.about a {
+    text-decoration: none;
+    color: #2d1fe8;;
+    display: inline;
+    border-bottom: 1px dotted #2d1fe8;;
+}
+
+.about a:hover {
+    border-bottom: 1px dotted white;
+    color: #2d1fe8;
+    text-decoration: none;
+}
+
+/* --------------------------- */
+
+/* Tutorial */
+
+.tutorial {
+    width: 100%;
+}
+
+.tutorialText {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 600;
+    color: #2d1fe8;
+    font-size: 27px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* --------------------------- */
+
+/* Tablets */
+
+
+@media only screen and (max-width: 950px) {
+
+    
+
+    body {
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer */
+        -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+        -webkit-user-select: none; /* Chrome, Safari, and Opera */
+        -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    }
+
+    main {
+        margin: 10px auto 10px;
+    }
+
+    .about {
+        letter-spacing: .03em;
+    }
+
+    .menu {
+        margin-left: 20px;
+    }
+
+    .input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 25px;
+        /* border-color: black; */
+        /* border: 2px solid black; */
+        padding-left: 25px;
+        padding-top: 6px;
+    }
+
+    .task {
+        font-size: 25px;
+    }
+
+    .seuss {
+        margin-top: 25px;
+    }
+
+}
+
+/* --------------------------- */
+
+/* Iphones */
+
+@media only screen and (max-width: 500px) {
+
+    .logo {
+        width: 30px;
+        float: left;    
+        margin-right: 15px;
+    }
+
+    .menu {
+        margin-left: 0px;
+    }
+
+    .menu li {
+        font-size: 14px;
+        margin-right: 9px;
+        margin-top: 7px;
+    }
+
+    form {
+        margin-bottom: -1px;
+    }
+
+    .input {
+        font-size: 25px;
+        padding-left: 25px;
+        padding-top: 9px;
+        background: none;
+        height:70px;
+        padding-left: 20px;
+        font-size: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-color: #2d1fe8;
+        padding-top: 0px;
+    }
+
+    input::placeholder {
+        color: #2d1fe8;
+        padding-top: 0px;
+    }
+
+    .addButton {
+        width: 40px;
+        height: 40px;
+        top: 15px;
+    }
+
+    .container {
+        padding-left: 0 !important;
+    }
+
+    .task-container {
+        margin-top: 1px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .task {
+        font-size: 25px;
+    }
+
+    .seuss {
+        margin-top: 25px;
+    }
+
+    #seuss1 {
+        margin-top: 30px;
+    }
+
+    .hidemobile {
+        display: none;
+    }
+
+    .about, .about a {
+        /* font-size: 22px;
+        line-height: 35px;
+        letter-spacing: .05em; */
+        color: #2d1fe8;
+    }
+
+    .about {
+        padding: 5px 20px 25px;
+        letter-spacing: .03em;
+    }
+
+    .tutorialText {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 600;
+        color: #2d1fe8;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .hM {
+        display: none;
+    }
+
+}
+    
