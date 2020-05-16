@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Organizer – Welcome</title>
+    
+    <meta property="og:title" content="Organizer – Bookmarking, simplified">
+    <meta property="og:description" content="Most of us are just trying to remember a couple good links. Organizer is a minimal bookmarking tool, simply copy paste a link and hit enter.">
+    <meta property="og:url" content="https://organizer.franciscosta.com">
+    <meta property="og:type" content="web app">
+    <meta data-rh="true" property="og:image" content="{{ url_for('static', filename='img/social.png') }}">
+    
+    <meta name="keywords" content="Organizer, Bookmarks, Bookmarking, Browser History">
+    <meta name="description" content="Bookmarking, simplified">
+    <meta name = "author" content = "Francisco Costa – franciscosta.com" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='fav/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='fav/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='fav/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='fav/site.webmanifest') }}">
+
+    <!-- <link rel="icon" href="data:,"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/acv3zna.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164009115-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164009115-1');
+    </script>
+
+
+</head>
+<body class="welcome-b">
+
+    <div class="welcome-outer">
+
+        <div class="welcome-header">
+
+            <div class="topmenu">
+                <a href="/signup" class="welcome-signup">Sign Up</a>
+                <a href="/login" class="welcome-login">Log In</a>
+                <a href="https://medium.com/@franciscostacom/organizer-5afacdfb2a73" target="_blank" class="welcome-about">About</a>
+            </div>
+
+            <img src="{{ url_for('static', filename='img/logo-big-u.png') }}" alt="" class="welcome-logo">
+            <!-- <p class="welcome-byline">Bookmarking, but simple.</p> -->
+
+        </div>
+
+        <div class="welcome-body">
+
+            <img src="{{ url_for('static', filename='img/welcome-asset.png') }}" class="welcome-url desktop-only" alt="">
+            <img src="{{ url_for('static', filename='img/welcome-asset-mobile.png') }}" class="welcome-url mobile-only" alt="">
+
+        </div>
+
+        <div class="welcome-it">
+            That's it!
+        </div>
+
+        <div class="welcome-footer">
+            <a href="/signup" class="welcome-signup">Sign Up</a>
+            <a href="/login" class="welcome-login">Log In</a>
+            <a href="https://medium.com/@franciscostacom/organizer-5afacdfb2a73" target="_blank" class="welcome-about">About</a>
+        </div>
+
+    </div>    
+
+</body>
+</html>

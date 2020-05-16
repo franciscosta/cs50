@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+
+<div class="header">
+    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-header-u.png') }}" alt="Organizer Logo" class="logo"></a>
+    <div class="menu">
+        <a href="/filter" class="menuitem">Filter</a>
+        <a href="/changepassword" class="menuitem hidemobile">Account</a>
+        <a href="/logout" class="menuitem">Log out</a>
+    </div>
+</div>
+
+<div class="outer_container">
+
+        <form action="/create" method="POST"  class="form">
+            
+            <input type="text" name="url" placeholder="Paste url here"  class="input" autocomplete="off">
+            <input type="text" name="name" placeholder="Name" class="input" autocomplete="off">
+            <!-- <input type="text" name="description" placeholder="Description" class="input" autocomplete="off"> -->
+            <textarea style="resize: none" name="description" id="txt" class="input" placeholder="Description" rows="5"></textarea>
+            <button type="submit" class="btn">Save</button>
+            <!-- <input type="submit" class="btn" value="Save"> -->
+
+        </form>
+
+</div>
+
+<br><br><br><br>
+
+{% endblock %}

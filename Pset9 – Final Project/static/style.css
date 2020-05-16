@@ -1,0 +1,546 @@
+/* --------------------------------- */
+
+/* Resets */
+
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+
+/* --------------------------------- */
+
+/* Overall things */
+
+body {
+    background-color: #ffffff;
+    font-family: bookmania, serif;
+    font-weight: 100;
+    font-style: normal;
+    outline: none; 
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* --------------------------------- */
+
+/* Header */
+
+.header {
+    margin: 150px auto 20px;
+    width: 100%;
+    max-width: 790px;
+    display: block;
+    z-index: 9999;
+}
+
+.header a {
+    margin-left: 10px;
+}
+
+.logo {
+    width: 300px;
+    margin-left: -34px;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.logo:hover {
+    opacity: .7;
+}
+
+.menu {
+    height: 20px;
+    display: inline-block;
+    float: left;
+}
+
+.menuitem {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 33px;
+    margin-right: 7spx;
+    display: inline-block;
+}
+
+.menuitem:hover {
+    opacity: .5;
+}
+
+
+
+/* --------------------------------- */
+
+/* Form */
+
+.form {
+    width: 100%;
+    max-width: 760px;
+    margin: 35px auto;
+    position: relative;
+}
+
+.add {
+    width: 100%;
+    border: none;
+    font-size: 30px;
+    padding-left: 40px;
+    font-family: bookmania, serif;
+}
+
+.add::placeholder {
+    color: black;
+    opacity: .2;
+}
+
+.add:focus {
+    outline: none; 
+}
+
+.button {
+    display: none;
+}
+
+.addicon {
+    position: absolute;
+    width: 40px;
+    margin-left: -21px;
+    /* left: -8.5%; */
+}
+
+
+/* -- */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+.input {
+    width: 100%;
+    border: none;
+    font-size: 30px;
+    padding-left: 40px;
+    font-family: bookmania, serif;
+    background: url('img/line.png') no-repeat;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    background: #ffe004;
+    border-radius: 23.38px;
+    display: inline-block;
+    float: left;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 12px;
+    margin: 35px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.delete {
+    width:23px;
+    margin-top: 16px;
+}
+
+.delete:hover {
+    opacity: .5;
+}
+
+
+/* --------------------------------- */
+
+/* Containers */
+
+.outer_container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0px auto 0;
+    border-left: 2px solid #F2F2F2;
+    background-color: white;
+    padding-top: 100px;
+    z-index: 9998;
+}
+
+.overall_container {
+    padding: 40px;
+    border-left: 2px solid #F2F2F2;
+    margin-left: -2px;
+    background: url('img/line.png') no-repeat;
+}
+
+
+/* --------------------------------- */
+
+/* Object */
+
+.title {
+    font-weight: 100;
+    font-size: 50px;
+    line-height: 1.1em;
+    letter-spacing: -0.05em;
+    display: block;
+    margin-bottom: -15px;
+}
+
+.description, textarea {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5em;
+    letter-spacing: -0.7px;;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 9px;
+    display: inline-block;
+}
+
+.info:hover {
+    opacity: .5;
+
+}
+
+.edit {
+    opacity: .3;
+}
+
+.edit:hover {
+    opacity: .7;
+}
+
+
+/* --------------------------------- */
+
+/* Pagination */
+
+.page {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.page:hover {
+    opacity: .5;
+}
+
+.active {
+    opacity: .2;
+}
+
+/* --------------------------------- */
+
+/* filterlist */
+
+.filterlist {
+    /* display: block; */
+    padding: 10px 15px;
+    border: 2px solid rgba(0,0,0,.08);
+    margin: 10px;
+    border-radius: 50px;
+    margin-left: -2px;
+    font-size: 12px;
+    /* font-family: bookmania, serif; */
+    /* font-weight: 100; */
+    /* text-transform: capitalize; */
+}
+
+.filterlist:hover {
+    opacity: 1;
+    color: white !important;
+}
+
+/* --------------------------------- */
+
+/* Messages */
+
+.message {
+    width: 100%;
+    background: #ffe004;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+/* --------------------------------- */
+
+/* Welcome Page */
+
+
+.topmenu {
+    margin: 50px auto;
+    text-align: center;
+    padding-left: 40px;
+}
+
+.welcome-outer {
+    padding: 100px 0;
+    
+}
+
+.welcome-header {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: url('img/black-line-hor.png') no-repeat center bottom;
+    padding-bottom: 30px;
+}
+
+.welcome-logo {
+    width: 100%;
+}
+
+.welcome-byline {
+    text-align: center;
+    font-size: 30px;
+}
+
+.welcome-body {
+    background: url('img/black-line.png') repeat-y center;
+    padding: 100px 0;
+    margin-top: -1px
+}
+
+.welcome-url {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 850px;
+    display: block;
+}
+
+.welcome-it {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 0;
+    background: url('img/black-line-hor.png') no-repeat center top;
+}
+
+.welcome-footer {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    padding: 0px 0;
+}
+
+
+
+.welcome-signup, .welcome-login, .welcome-about {
+    background: #000000;
+    border-radius: 23.38px;
+    display: inline-block;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.welcome-signup {
+    padding: 10px 19px;
+    background: #ffe004;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.welcome-login, .welcome-about {
+    background: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.welcome-about {
+    opacity: .3;
+}
+
+.welcome-signup:hover, .welcome-login:hover, .welcome-about:hover {
+    opacity: .3;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+
+/* ----------
+----------------------- */
+
+@media (max-width: 900px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+    
+    body {
+        padding: 0px 30px 0 45px;
+    }
+
+    /* Welcome */
+
+    .welcome-b {
+        padding: 0px 30px 0 30px !important;
+
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .topmenu {
+        margin: 0px auto 50px;
+        text-align: center;
+        font-size: 12px;
+        padding-left: 0px;
+    }
+
+    .welcome-outer {
+        padding: 30px 0 40px;   
+    }
+
+    .welcome-signup, .welcome-login, .welcome-about {
+        font-size: 12px;
+    }
+
+    /* Header */
+
+    .header {
+        margin: 50px auto 15px;
+    }
+
+    .outer_container {
+        padding-top: 20px !important;
+    }
+
+    .overall_container {
+        padding: 30px;
+    }
+
+    .menuitem {
+        margin-top: 15px;
+        margin-right: 3px;
+        font-size: 11px;
+    }
+
+    .logo {
+        width: 140px;
+        margin-left: -22px;
+        margin-right: 10px;
+    }
+
+    .form {
+        margin: 25px auto;
+    }
+
+    .add, .input {
+        font-size: 21px;
+        padding-left: 30px;
+    }
+
+    .addicon {
+        width: 30px;
+        margin-top: 0px;
+        margin-left: -16px;
+    }
+
+    .outer_container {
+        padding-top: 50px;
+        margin-top: -5px;
+    }
+
+
+    .title {
+        font-size: 35px;
+        line-height: 1.1em;
+        letter-spacing: -0.05em;
+        margin-bottom: -10px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 1.4em;
+        letter-spacing: -0.7px;;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        font-size: 10px;
+        margin-right: 5px;
+    }
+
+    .hidemobile {
+        display: none;
+    }
+
+    .btn {
+        background: #ffe004;
+        color: black;
+        padding: 10px 12px;
+        margin-right: 7px;
+    }
+
+    .delete {
+        width:23px;
+        margin-top: 25px !important;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .addicon {
+        margin-top: 4px !important;
+    }
+
+}

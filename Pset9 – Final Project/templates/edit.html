@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+
+   {% if post %}
+
+    <div class="header">
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-header-u.png') }}" alt="Organizer Logo" class="logo"></a>
+        <div class="menu">
+            <a href="/filter" class="menuitem">Filter</a>
+            <a href="/changepassword" class="menuitem hidemobile">Account</a>
+            <a href="/logout" class="menuitem">Log out</a>
+        </div>
+    </div>
+
+    <div class="outer_container">
+
+        <script>
+            function removeTextAreaWhiteSpace() {
+                var myTxtArea = document.getElementById(txt);
+                myTxtArea.value = myTxtArea.value.replace(/^\s*|\s*$/g,’’);
+            }
+        </script>
+
+        <form action="" method="POST" class="form">
+            
+            <input type="text" name="name" value="{{ post.name }}"  class="input" autocomplete="off">
+            <textarea style="resize: none" name="description" id="txt" class="input" rows="5">{{ post.description }}</textarea>
+            <!-- <input type="text" name="description" value="{{ post.description }}"  class="input" autocomplete="off"> -->
+            <!-- <input type="submit" class="btn" value="Update"> -->
+            <button type="submit" class="btn">Update</button>
+
+        </form>
+
+        <a href="/delete/{{ post.id }}"><img src="{{ url_for('static', filename='img/delete.png') }}" alt="" class="delete"></a>
+
+    </div>
+
+   {% endif %}
+
+{% endblock %}

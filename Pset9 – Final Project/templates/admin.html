@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Admin
+{% endblock %}
+
+{% block body %}
+
+        <h2>Users</h2>
+
+        {{ users }}
+
+        <h2>Add a category</h2>
+
+        <form action="/admin" method="POST">
+            <input type="text" name="categ" placeholder="Name">
+            <input type="submit">
+        </form>
+
+        {% if categoryList %}
+
+            {% for category in categoryList %}
+
+                <p>{{ category.id }}: {{ category.name }}</p>
+
+            {% endfor %}
+
+        {% endif %}
+
+        <h2>Add a link</h2>
+
+        <form action="/admin" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="url" placeholder="url">
+            <input type="text" name="color" placeholder="color" value="#">
+            <!-- <input type="text" name="linktype" placeholder="Category"> -->
+            <!-- <input type="text" name="categoryid" placeholder="category id"> -->
+            <select name="category">
+                {% for category in categoryList %}
+                    <option name="category">{{ category.name }}</option>
+                {% endfor %}
+              </select>
+            <input type="submit">
+        </form>
+
+        {% if linkList %}
+
+            {% for link in linkList %}
+
+                <p>{{ link.id }}: {{ link.name }}, {{ link.url }}, {{ link.color }}</p>
+
+            {% endfor %}
+
+        {% endif %}
+
+        {{ catid }}
+
+
+{% endblock %}

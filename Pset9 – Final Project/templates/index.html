@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+<div class="header">
+    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-header-u.png') }}" alt="Organizer Logo" class="logo"></a>
+    <div class="menu">
+        <a href="/filter" class="menuitem">Filter</a>
+        <a href="/changepassword" class="menuitem hidemobile">Account</a>
+        <a href="/logout" class="menuitem">Log out</a>
+    </div>
+</div>
+
+<div class="outer_container">
+
+    <form action="/" method="POST" class="form">
+        <img src="{{ url_for('static', filename='img/add-icon.png') }}" class="addicon" alt="">
+        <input type="text" name="url" placeholder="Enter a link and hit enter" class="add" autocomplete="off" autofocus="autofocus">
+        <input type="submit" class="button">
+    </form>
+
+    {% if post %}
+
+        {% for p in post.items %}
+            
+                <div class="overall_container" onMouseOver="this.style.borderLeftColor='{{ p.color }}'" onmouseout="this.style.borderLeftColor=''">
+
+
+                    <a href="{{ p.url }}" class="box" target="_blank" >
+
+                        <span class="title">
+                            {{ p.name }}
+                        </span>
+                        <p class="description">
+                            {{ p.description }}
+                        </p>
+
+                    </a>
+
+                    <a href="/category/{{ p.linktype }}" class="info">{{ p.linktype }}</a>
+
+                    <a href="/url/{{ p.sourceurl }}" class="info" style="color:{{ p.color }}">{{ p.sourceurl }} </a>
+
+                    <a href="/edit/{{ p.id }}" class="info edit">Edit</a>
+
+                </div>    
+                
+        {% endfor %}
+
+
+
+        <div class="overall_container">
+
+            {% for page_num in post.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+
+                {% if page_num %}
+
+                    {% if post.page == page_num %}
+                        <a href="{{ url_for('index', page=page_num) }}" class="page active"> {{ page_num }} </a>
+
+                    {% else %}
+                    <a href="{{ url_for('index', page=page_num) }}" class="page"> {{ page_num }} </a>
+
+                    {% endif %}
+
+                {% else %}
+
+                    
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+        
+
+    {% else %}
+
+        
+
+    {% endif %}
+
+        
+</div>
+
+{% endblock %}

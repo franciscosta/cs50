@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+<div class="header">
+    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-header-u.png') }}" alt="Organizer Logo" class="logo"></a>
+    <div class="menu">
+        <a href="/filter" class="menuitem">Filter</a>
+        <a href="/changepassword" class="menuitem hidemobile">Account</a>
+        <a href="/logout" class="menuitem">Log out</a>
+    </div>
+</div>
+
+<div class="outer_container">
+
+    <div class="overall_container">
+    
+        {% for p in linktype %}
+                
+            <a href="/category/{{ p.linktype }}" class="info filterlist"onMouseOver="this.style.background='#000000'" onmouseout="this.style.background=''">{{ p.linktype }}</a>
+                    
+        {% endfor %}
+
+    </div>
+
+    <div class="overall_container">
+
+        {% for p in sourceurl %}
+                
+        <a href="/url/{{ p.sourceurl }}" class="info filterlist" style="color:{{ p.color }}" onMouseOver="this.style.background='{{ p.color }}'" onmouseout="this.style.background=''">{{ p.sourceurl }} </a>
+                    
+        {% endfor %}
+
+    </div>
+    
+        
+</div>
+
+{% endblock %}

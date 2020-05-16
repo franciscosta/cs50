@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+
+<div class="header">
+    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo-header-u.png') }}" alt="Organizer Logo" class="logo"></a>
+    <div class="menu">
+        <a href="/signup" class="menuitem">Sign up</a>
+    </div>
+</div>
+
+<div class="outer_container">
+
+    <form action="/login" method="post" class="form">
+    
+        <input type="text" name="username" placeholder="Username" autocomplete="off" autofocus class="input">
+        <input type="password" name="password" placeholder="Password" class="input">
+        <!-- <input type="submit" class="btn"> -->
+        <button type="submit" class="btn">Log In</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
